@@ -1,0 +1,69 @@
+{% extends 'users/base.html.twig' %}
+   {% block title %}Categories{% endblock %}
+        {% block body %}
+
+
+            <body class="header_sticky header-style-1 has-menu-extra">
+        <!-- Preloader -->
+        {#        <div id="loading-overlay">#}
+        {#            <div class="loader"></div>#}
+        {#        </div>#}
+
+        <div class="boxed">
+            <div id="site-header-wrap">
+                {% include 'users/header.html.twig' %}
+            </div>
+
+            <!-- Page title -->
+            <div class="page-title parallax parallax1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">Categories</h1>
+                            </div><!-- /.page-title-heading -->
+
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.page-title -->
+
+            <section class="flat-row main-shop">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <div class="product-content product-fourcolumn clearfix">
+                                <ul class="product">
+                                    {% for categorie in categories %}
+                                        <li class="product-item">
+                                            <div class="product-thumb clearfix">
+                                                <a href="/categories/user/{{ categorie.id }}">
+                                                    <img style="  height: 292px;  width: 292px;" src="/uploads/{{ categorie.image }}" alt="image">
+                                                </a>
+                                            </div>
+                                            <div class="product-info clearfix">
+                                                <span class="product-title">{{ categorie.nom }}</span>
+
+
+                                            </div>
+                                            <div class="add-to-cart text-center">
+                                                <a href="#">Voir les sous categories et les produits</a>
+                                            </div>
+
+                                        </li>
+                                    {% endfor %}
+                                </ul><!-- /.product -->
+                            </div><!-- /.product-content -->
+
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.flat-row -->
+
+
+            {% include 'users/footer.html.twig' %}
+        </div>
+
+        {% endblock %}

@@ -1,0 +1,317 @@
+{#<!-- Page Loader -->#}
+{#<div class="page-loader-wrapper">#}
+{#    <div class="loader">#}
+{#        <div class="preloader">#}
+{#            <div class="spinner-layer pl-grey">#}
+{#                <div class="circle-clipper left">#}
+{#                    <div class="circle"></div>#}
+{#                </div>#}
+{#                <div class="circle-clipper right">#}
+{#                    <div class="circle"></div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <p>Chargement</p>#}
+{#    </div>#}
+{#</div>#}
+{#<!-- #END# Page Loader -->#}
+{#<!-- Overlay For Sidebars -->#}
+{#<div class="overlay"></div>#}
+{#<!-- #END# Overlay For Sidebars -->#}
+{#<!-- Search Bar -->#}
+{#<div class="search-bar">#}
+{#    <div class="search-icon">#}
+{#        <i class="material-icons">search</i>#}
+{#    </div>#}
+{#    <input type="text" placeholder="START TYPING...">#}
+{#    <div class="close-search">#}
+{#        <i class="material-icons">close</i>#}
+{#    </div>#}
+{#</div>#}
+{#<!-- #END# Search Bar -->#}
+{#<!-- Top Bar -->#}
+{#<nav class="navbar">#}
+{#    <div class="container-fluid">#}
+{#        <div class="navbar-header">#}
+{#            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>#}
+{#            <a href="javascript:void(0);" class="bars"></a>#}
+{#            <a class="navbar-brand" href="/tableau_board">ADMIN - Look4design</a>#}
+{#        </div>#}
+
+{#    </div>#}
+{#</nav>#}
+{#<!-- #Top Bar -->#}
+{#<section>#}
+{#    <!-- Left Sidebar -->#}
+{#    <aside id="leftsidebar" class="sidebar">#}
+{#        <!-- User Info -->#}
+{#        <div class="user-info">#}
+
+{#            <div class="info-container">#}
+{#                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ app.user.username }}</div>#}
+{#                <div class="email">{{ app.user.email }}</div>#}
+{#                <div class="btn-group user-helper-dropdown">#}
+{#                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>#}
+{#                    <ul class="dropdown-menu pull-right">#}
+{#                        <li><a href="/profile"><i class="material-icons">person</i>Profile</a></li>#}
+{#                        <li role="separator" class="divider">#}
+{#                        <li><a href="/logout"><i class="material-icons">input</i>Sign Out</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- #User Info -->#}
+{#        <!-- Menu -->#}
+{#        <div class="menu">#}
+{#            <ul class="list">#}
+{#                <li class="header">MAIN NAVIGATION</li>#}
+{#                <li class="active">#}
+{#                    <a href="/tableau_board">#}
+{#                        <i class="material-icons">home</i>#}
+{#                        <span>Accueil</span>#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="/utilisateurs" >#}
+{#                        <i class="material-icons">swap_calls</i>#}
+{#                        <span>Liste des utilisateurs</span>#}
+{#                    </a>#}
+
+{#                </li>#}
+
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">view_list</i>#}
+{#                        <span>Categories</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="/categories/nouveau">Ajouter nouvelle catégorie</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/categories">Liste des categories</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/categories/statistiques">Statistiques</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">view_list</i>#}
+{#                        <span>Sous categories</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="/sous_categories/nouveau">Ajouter nouvelle sous catégorie</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/sous_categories">Liste des sous categories</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/sous_categories/statistiques">Statistiques</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">view_list</i>#}
+{#                        <span>Produits</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="/produit/nouveau">Ajouter nouvelle produit</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/produit">Liste des produits</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/produit/statistiques">Statistiques</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">view_list</i>#}
+{#                        <span>Commandes</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="/commandes">Liste des commandes</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="/commandes/statistiques">Statistiques</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">pie_chart</i>#}
+{#                        <span>Statistiques</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="pages/charts/morris.html">Morris</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="pages/charts/flot.html">Flot</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="pages/charts/chartjs.html">ChartJS</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="pages/charts/sparkline.html">Sparkline</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="pages/charts/jquery-knob.html">Jquery Knob</a>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="javascript:void(0);" class="menu-toggle">#}
+{#                        <i class="material-icons">view_list</i>#}
+{#                        <span>Blogs</span>#}
+{#                    </a>#}
+{#                    <ul class="ml-menu">#}
+{#                        <li>#}
+{#                            <a href="blog/nouvel_article">Ajouter un nouvel article</a>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <a href="blog">Liste des articles</a>#}
+{#                        </li>#}
+
+{#                    </ul>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#        <!-- #Menu -->#}
+{#        <!-- Footer -->#}
+{#        <div class="legal">#}
+{#            <div class="copyright">#}
+{#                 <a href="javascript:void(0);">Admin - Look4design</a>.#}
+{#            </div>#}
+
+{#        </div>#}
+{#        <!-- #Footer -->#}
+{#    </aside>#}
+{#    <!-- #END# Left Sidebar -->#}
+{#    <!-- Right Sidebar -->#}
+
+{#</section>#}
+
+<!-- ========== Left Sidebar Start ========== -->
+<div class="left side-menu">
+
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <div class="">
+            <!--<a href="index.html" class="logo text-center">Fonik</a>-->
+            <a href="index.html" class="logo"><img src="/assets/images/logo.png" height="20" alt="logo"></a>
+        </div>
+    </div>
+
+    <div class="sidebar-inner slimscrollleft">
+        <div id="sidebar-menu">
+            <ul>
+
+                <li class="menu-title">Main</li>
+
+                <li>
+                    <a href="/tableau_board" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Tableau de board </span></a>
+                </li>
+                <li>
+                    <a href="/utilisateurs" class="waves-effect"><i class="dripicons-device-desktop"></i><span> Utilisateurs </span></a>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span> Categories <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li><a href="/categories/nouveau">Ajouter nouvelle catégorie</a></li>
+                        <li><a href="/categories">Liste des categories</a></li>
+                        <li><a href="/categories/statistiques">Statistiques</a></li>
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span> Sous categories <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/sous_categories/nouveau">Ajouter nouvelle sous catégorie</a>
+                        </li>
+                        <li>
+                            <a href="/sous_categories">Liste des sous categories</a>
+                        </li>
+                        <li>
+                            <a href="/sous_categories/statistiques">Statistiques</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span>Produits <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/produit/nouveau">Ajouter nouvelle produit</a>
+                        </li>
+                        <li>
+                            <a href="/produit">Liste des produits</a>
+                        </li>
+                        <li>
+                            <a href="/produit/statistiques">Statistiques</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span>Commandes <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/commandes">Liste des commandes</a>
+                        </li>
+                        <li>
+                            <a href="/commandes/statistiques">Statistiques</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span>Statistiques <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="pages/charts/morris.html">Morris</a>
+                        </li>
+                        <li>
+                            <a href="pages/charts/flot.html">Flot</a>
+                        </li>
+                        <li>
+                            <a href="pages/charts/chartjs.html">ChartJS</a>
+                        </li>
+                        <li>
+                            <a href="pages/charts/sparkline.html">Sparkline</a>
+                        </li>
+                        <li>
+                            <a href="pages/charts/jquery-knob.html">Jquery Knob</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-blog"></i><span>Blog <span class="float-right"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/blog/nouvel_article">Ajouter un nouvel article</a>
+                        </li>
+                        <li>
+                            <a href="/blog">Liste des articles</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div> <!-- end sidebarinner -->
+</div>
+<!-- Left Sidebar End -->
+

@@ -1,0 +1,93 @@
+
+
+{% extends 'dashboard/base.html.twig' %}
+
+        {% block body %}
+
+
+            {% block title %} {{ proudit.nom }}{% endblock %}
+
+<body class="fixed-left">
+
+{#            <!-- Loader -->#}
+{#            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>#}
+
+<!-- Begin page -->
+<div id="wrapper">
+
+
+    {% include 'dashboard/leftSideBar.html.twig' %}
+
+    <!-- Start right Content here -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+
+            {% include 'dashboard/topBar.html.twig' %}
+
+            <!-- ==================
+                 PAGE CONTENT START
+                 ================== -->
+
+            <div class="page-content-wrapper">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+
+                                    <h4 class="mt-0 header-title"> {{ produit.nom }}</h4>
+
+                                    <div class="row ">
+                                        <div class="col-md-12 m-5">
+                                            <img height="400" src="/uploads/{{ produit.image }}">
+                                        </div>
+
+                                        <div class="col-md-12 ml-5 ">
+
+
+                                            <p class="label">{{ produit.description }}</p>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="button-items offset-9">
+                                            <a class="btn btn-success waves-effect waves-light"
+                                               href="{{ path('produit_edit', {'id': produit.id}) }}">Modifier</a>
+                                            {{ include('produit/_delete_form.html.twig') }}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+
+            </div><!-- container -->
+
+        </div>
+
+    </div> <!-- content -->
+
+    <footer class="footer">
+        Look4Desgin <i class="mdi mdi-heart text-danger"></i> 2021.
+    </footer>
+
+</div>
+<!-- End Right content here -->
+
+
+<!-- END wrapper -->
+
+
+{% endblock %}
+
+

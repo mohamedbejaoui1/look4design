@@ -1,0 +1,87 @@
+{% extends 'users/base.html.twig' %}
+   {% block title %}Categories{% endblock %}
+        {% block body %}
+
+
+            <body class="header_sticky header-style-1 has-menu-extra">
+
+        <div class="boxed">
+            <div id="site-header-wrap">
+                {% include 'users/header.html.twig' %}
+            </div>
+
+            <div class="page-title parallax parallax1" style="background-position: 50% 89px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{ produit.nom }}</h1>
+                            </div><!-- /.page-title-heading -->
+
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div>
+
+            <section class="flat-row main-shop shop-detail style-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="flat-image-box clearfix">
+                                <div class="inner padding-top-4">
+                                    <ul class="product-list-fix-image">
+                                        <li>
+                                            <img src="/uploads/{{ produit.image }}" alt="Image">
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="divider h0"></div>
+                            <div class="product-detail">
+                                <div class="inner">
+                                    <div class="content-detail">
+                                        <h2 class="product-title">{{ produit.nom }}</h2>
+
+                                        <p>{{ produit.description }}</p>
+                                        <div class="price margin-top-30">
+                                            <ins class="no-padding"><span class="amount">{{ produit.prix }} TND</span>
+                                            </ins>
+                                        </div>
+                                        <div class="product-quantity margin-top-44">
+                                            <div class="quantity">
+                                                <input type="text" value="1" name="quantity-number"
+                                                       class="quantity-number">
+                                                <span class="inc quantity-button">+</span>
+                                                <span class="dec quantity-button">-</span>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a href="#">ADD TO CART</a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="product-categories margin-top-22">
+                                            <span>Categories: </span>{{ produit.categorie }}
+                                        </div>
+                                        <div class="product-categories margin-top-22">
+                                            <span>Sous categories: </span>{{ produit.SousCategorie }}
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div><!-- /.product-detail -->
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+
+            {% include 'users/footer.html.twig' %}
+
+        </div>
+
+        {% endblock %}

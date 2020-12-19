@@ -1,0 +1,288 @@
+{% extends 'users/base.html.twig' %}
+   {% block title %}Acceuil{% endblock %}
+        {% block body %}
+
+
+            <body class="header_sticky header-style-1 has-menu-extra">
+        <!-- Preloader -->
+        {#        <div id="loading-overlay">#}
+        {#            <div class="loader"></div>#}
+        {#        </div>#}
+
+        <div class="boxed">
+            <div id="site-header-wrap">
+                {% include 'users/header.html.twig' %}
+            </div>
+
+            <!-- SLIDER -->
+            <div class="rev_slider_wrapper fullwidthbanner-container">
+                <div id="rev-slider1" class="rev_slider fullwidthabanner">
+                    <ul>
+
+                        {% for produitAccueil in produitsAccueil %}
+                            <!-- Slide 1 -->
+                            <li data-transition="random">
+                                <!-- Main Image -->
+                                <img src="/uploads/{{ produitAccueil.image }}" alt="" data-bgposition="center center"
+                                     data-no-retina>
+
+                                <!-- Layers -->
+                                <div class="tp-caption tp-resizeme text-white font-weight-300"
+                                     data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-93','-93','-93','-93']"
+                                     data-fontsize="['24','24','24','18']"
+                                     data-lineheight="['72','72','72','36']"
+                                     data-width="full"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];"
+                                     data-mask_out="x:inherit;y:inherit;"
+                                     data-start="700"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on">
+                                    NEW TREND 2020
+                                </div>
+
+                                <div class="tp-caption tp-resizeme text-white font-weight-500"
+                                     data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-42','-42','-42','-42']"
+                                     data-fontsize="['52','52','52','40']"
+                                     data-lineheight="['60','60','60','40']"
+                                     data-width="full"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];"
+                                     data-mask_out="x:inherit;y:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on">
+                                    {{ produitAccueil.nom }}
+                                </div>
+
+                                <div class="tp-caption tp-resizeme text-white font-weight-400 "
+                                     data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['12','12','12','12']"
+                                     data-fontsize="['18','18','18','16']"
+                                     data-lineheight="['72','72','72','38']"
+                                     data-width="full"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];"
+                                     data-mask_out="x:inherit;y:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on">
+                                    BIG SALE OF THIS WEEK UP TO 30%
+                                </div>
+
+                                <div class="tp-caption"
+                                     data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['80','80','80','80']"
+                                     data-width="full"
+                                     data-height="none"
+                                     data-whitespace="normal"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];"
+                                     data-mask_out="x:inherit;y:inherit;"
+                                     data-start="1000"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on">
+                                    <a href="#" class="themesflat-button has-padding-36 bg-accent has-shadow"><span>Commander maintenant</span></a>
+                                </div>
+                            </li>
+                            <!-- /End Slide 1 -->
+                        {% endfor %}
+
+
+                    </ul>
+                </div>
+            </div>
+            <!-- END SLIDER -->
+
+            <!-- IMAGE BOX -->
+            <section class="flat-row row-image-box">
+                <div class="container">
+                    <div class="row gutter-10">
+                        {% for categorie in categoriesImportant |slice(0,1) %}
+                            <div class="col-sm-6 col-md-4">
+                                <div class="flat-image-box style-1 row2 data-effect clearfix">
+                                    <div class="item data-effect-item">
+                                        <div class="inner">
+                                            <div class="thumb">
+                                                <img style="height: 500px; width: 375px"
+                                                     src="/uploads/{{ categorie.image }}" alt="Image">
+                                                <div class="elm-btn">
+                                                    <a href="categories/user/{{ categorie.id }}"
+                                                       class="themesflat-button bg-white width-150">{{ categorie.nom }}</a>
+                                                </div>
+                                                <div class="overlay-effect bg-color-1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- /.col-md-4 -->
+                        {% endfor %}
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="flat-image-box style-1 row2 data-effect clearfix">
+                                {% for categorie in categoriesImportant |slice(1, 2) %}
+                                    <div class="item data-effect-item">
+                                        <div class="inner">
+                                            <div class="thumb">
+                                                <img style="height: 240px; width: 375px"
+                                                     src="/uploads/{{ categorie.image }}" alt="Image">
+                                                <div class="elm-btn">
+                                                    <a href="categories/user/{{ categorie.id }}"
+                                                       class="themesflat-button bg-white width-150">{{ categorie.nom }}</a>
+                                                </div>
+                                                <div class="overlay-effect bg-color-1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+
+                            </div>
+                        </div><!-- /.col-md-4 -->
+                        {% for categorie in categoriesImportant |slice(3) %}
+                            <div class="col-sm-6 col-md-4">
+                                <div class="flat-image-box style-1 row2 data-effect clearfix">
+                                    <div class="item data-effect-item">
+                                        <div class="inner">
+                                            <div class="thumb">
+                                                <img style="height: 500px; width: 375px"
+                                                     src="/uploads/{{ categorie.image }}" alt="Image">
+                                                <div class="elm-btn">
+                                                    <a href="categories/user/{{ categorie.id }}"
+                                                       class="themesflat-button bg-white width-150">{{ categorie.nom }}</a>
+                                                </div>
+                                                <div class="overlay-effect bg-color-1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- /.col-md-4 -->
+                        {% endfor %}
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+            <!-- END IMAGE BOX -->
+
+            <!-- PRODUCT NEW -->
+            <section class="flat-row row-product-new">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title-section margin-bottom-52">
+                                <h2 class="title">
+                                    Nouveaux produits
+                                </h2>
+                            </div>
+                            <div class="product-content product-fourcolumn clearfix">
+                                <ul class="product style2 clearfix">
+                                    {% for produit in produitsLatest %}
+                                        <li class="product-item">
+                                            <div class="product-thumb clearfix">
+                                                <a href="produit/user/{{ produit.id }}" class="product-thumb">
+                                                    <img style="width: 286px; height: 250px"
+                                                         src="/uploads/{{ produit.image }}" alt="image">
+                                                </a>
+                                                <span class="new">New</span>
+                                            </div>
+                                            <div style="    padding: 20px;" class="product-info text-center clearfix">
+                                                <span class="product-title">{{ produit.nom }}</span>
+                                                <div class="price">
+                                                    <ins>
+                                                        <span class="amount">{{ produit.prix }} Dinars</span>
+                                                    </ins>
+                                                </div>
+
+                                            </div>
+                                            <div class="add-to-cart text-center">
+                                                <a href="#">ADD TO CART</a>
+                                            </div>
+                                            <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                                        </li>
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+            <!-- END PRODUCT NEW -->
+
+
+            <!-- NEW LATEST -->
+            <section class="flat-row row-new-latest">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title-section margin-bottom-40">
+                                <h2 class="title">Derniers articles</h2>
+                            </div>
+                            <div class="new-latest-wrap">
+                                <div class="flat-new-latest flat-carousel-box post-wrap style3 data-effect clearfix"
+                                     data-auto="false" data-column="3" data-column2="2" data-column3="1" data-gap="30">
+                                    <div class="owl-carousel owl-theme">
+                                        {% for article in BlogLatest %}
+                                            <article class="post clearfix">
+                                                <div class="featured-post data-effect-item">
+                                                    <img style="width: 380px ; height: 280px " src="/uploads/{{ article.image }}"
+                                                         alt="image">
+                                                    <div class="content-post text-center">
+                                                        <div class="title-post">
+                                                            <h2><a href="/blogs/users/{{ article.id }}">{{ article.titre }}</a></h2>
+                                                        </div><!-- /.title-post -->
+                                                        <ul class="meta-post">
+                                                            <li class="date">
+                                                                {{ article.date|date("d/m/Y") }}
+                                                            </li>
+
+                                                        </ul><!-- /.meta-post -->
+                                                        <div class="entry-post">
+                                                            <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ article.text }}</p>
+                                                            <div class="more-link">
+                                                                <a href="/blogs/users/{{ article.id }}">Afficher plus</a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /.content-post -->
+                                                    <div class="overlay-effect bg-overlay-black"></div>
+                                                </div>
+                                            </article><!-- /.post -->
+                                        {% endfor %}
+                                    </div><!-- /.owl-carousel -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END NEW LATEST -->
+
+
+            {% include 'users/footer.html.twig' %}
+        </div>
+
+        {% endblock %}

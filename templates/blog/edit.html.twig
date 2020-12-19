@@ -1,0 +1,65 @@
+{% extends 'dashboard/base.html.twig' %}
+
+        {% block body %}
+
+
+            {% block title %}Modifier {{ blog.nom }}{% endblock %}
+
+            <body class="fixed-left">
+
+            {#            <!-- Loader -->#}
+            {#            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>#}
+
+            <!-- Begin page -->
+            <div id="wrapper">
+
+
+                {% include 'dashboard/leftSideBar.html.twig' %}
+
+                <!-- Start right Content here -->
+                <div class="content-page">
+                    <!-- Start content -->
+                    <div class="content">
+
+                        {% include 'dashboard/topBar.html.twig' %}
+
+                        <div class="page-content-wrapper">
+
+                            <div class="container-fluid">
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card m-b-20">
+                                            <div class="card-body">
+
+                                                <h4 class="mt-0 header-title">Modifier {{ blog.nom }}</h4>
+
+
+                                                <div class="body">
+
+                                                    {{ include('blog/_form.html.twig', {'button_label': 'Mise a jour'}) }}
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end col -->
+                                </div> <!-- end row -->
+
+
+                            </div><!-- container -->
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </body>
+
+
+
+
+
+        {% endblock %}
+
+

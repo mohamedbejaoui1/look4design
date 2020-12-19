@@ -1,0 +1,53 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div style="  background: #ffffff;border-radius: 2px;box-shadow: 1px 2px 2px -1px rgba(0, 0, 255, .2); padding: 20px;" class="col-6 offset-3">
+        <form class="login100-form validate-form flex-sb flex-w" action="{{ path("fos_user_security_check") }}"
+              method="post">
+            {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+            {% endif %}
+            <div class="p-b-9">
+
+                <label for="_username" class="required">Nom d'utilisateur</label>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Username is required">
+                <input class="input100" type="text" name="_username" value="{{ last_username }}" required="required"
+                       autocomplete="username">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="p-t-13 p-b-9">
+
+                <label for="password" class="required">Mot de passe</label>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Password is required">
+                <input class="input100" type="password" id="password" name="_password" required="required"
+                       autocomplete="current-password">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="p-t-13 p-b-9">
+                <input style="display: inline!important;" type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                <label style="display: inline !important;"
+                       for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+            </div>
+
+            <div class="container-login100-form-btn m-t-17">
+                <button class="login100-form-btn" type="submit" id="_submit" name="_submit" ><strong>Se connecter</strong></button>
+            </div>
+
+            {% if error %}
+                <div class="invalid-login">Il n'y a pas de compte avec cet identifiant / mot de passe</div>
+            {% endif %}
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

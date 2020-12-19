@@ -1,0 +1,112 @@
+{% extends 'dashboard/base.html.twig' %}
+
+        {% block body %}
+
+
+            {% block title %}Tableau de board {% endblock %}
+
+<body class="fixed-left">
+
+{#            <!-- Loader -->#}
+{#            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>#}
+
+<!-- Begin page -->
+<div id="wrapper">
+
+
+    {% include 'dashboard/leftSideBar.html.twig' %}
+
+    <!-- Start right Content here -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+
+            {% include 'dashboard/topBar.html.twig' %}
+
+            <!-- ==================
+                 PAGE CONTENT START
+                 ================== -->
+
+            <div class="page-content-wrapper">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+
+                                    <h4 class="mt-0 header-title"> Liste des utilisateurs</h4>
+
+                                    <div class="table-rep-plugin">
+                                        <div class="table-wrapper">
+
+                                            <div class="table-responsive b-0" data-pattern="priority-columns">
+
+                                                <table id="tech-companies-1" class="table ">
+                                                    <thead>
+                                                    <tr>
+                                                        <th id="tech-companies-1-col-0"></th>
+                                                        <th data-priority="1" id="tech-companies-1-col-1">Nom de
+                                                            l'utilisateur
+                                                        </th>
+                                                        <th data-priority="3" id="tech-companies-1-col-2">Email</th>
+                                                        <th data-priority="1" id="tech-companies-1-col-3">Derniere
+                                                            visite
+                                                        </th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {% set i =1 %}
+                                                    {% for user in users %}
+                                                        <tr>
+                                                            <td data-priority="1" colspan="1"
+                                                                data-columns="tech-companies-1-col-1">{{ i }}</td>
+                                                            <td data-priority="3" colspan="1"
+                                                                data-columns="tech-companies-1-col-2">{{ user.username }}</td>
+                                                            <td data-priority="1" colspan="1"
+                                                                data-columns="tech-companies-1-col-3">{{ user.email }}</td>
+                                                            <td data-priority="3" colspan="1"
+                                                                data-columns="tech-companies-1-col-4">{{
+                                                                user.last_login }}
+                                                            </td>
+                                                        </tr>
+                                                        {% set i =i+1 %}
+                                                    {% else %}
+                                                        <tr>
+                                                            <td colspan="4">no records found</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+
+                </div><!-- container -->
+
+            </div>
+
+        </div> <!-- content -->
+
+        <footer class="footer">
+            Look4Desgin <i class="mdi mdi-heart text-danger"></i> 2021.
+        </footer>
+
+    </div>
+    <!-- End Right content here -->
+
+</div>
+<!-- END wrapper -->
+
+
+{% endblock %}
+

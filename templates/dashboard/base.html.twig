@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}!{% endblock %}</title>
+    {% block stylesheets %}
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Look4design - Tableau de board </title>
+        <meta content="Admin Dashboard" name="description"/>
+        <meta content="Themesbrand" name="author"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <!-- Favicon and touch icons  -->
+        <link href="/assets/icon/favicon.png" rel="shortcut icon">
+
+        <!--Morris Chart CSS -->
+        <link rel="stylesheet" href="/assets/plugins/morris/morris.css">
+
+        <!-- Basic Css files -->
+        <link href="/assets/css2/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css2/icons.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css2/style.css" rel="stylesheet" type="text/css">
+    {% endblock %}
+</head>
+<body class="theme-red">
+{% block body %}
+
+{% endblock %}
+{% block javascripts %}
+
+    <!-- jQuery  -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/jquery.slimscroll.js"></script>
+    <script src="/assets/js/waves.js"></script>
+    <script src="/assets/js/jquery.nicescroll.js"></script>
+    <script src="/assets/js/jquery.scrollTo.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="/assets/plugins/morris/morris.min.js"></script>
+    <script src="/assets/plugins/raphael/raphael-min.js"></script>
+
+    <script src="/assets/pages/dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="/assets/js/app.js"></script>
+
+{% endblock %}
+</body>
+</html>

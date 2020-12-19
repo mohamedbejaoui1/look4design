@@ -1,0 +1,101 @@
+
+{% extends 'dashboard/base.html.twig' %}
+
+        {% block body %}
+
+
+            {% block title %}Liste des articles {% endblock %}
+
+<body class="fixed-left">
+
+{#            <!-- Loader -->#}
+{#            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>#}
+
+<!-- Begin page -->
+<div id="wrapper">
+
+
+    {% include 'dashboard/leftSideBar.html.twig' %}
+
+    <!-- Start right Content here -->
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+
+            {% include 'dashboard/topBar.html.twig' %}
+
+            <!-- ==================
+                 PAGE CONTENT START
+                 ================== -->
+
+            <div class="page-content-wrapper">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-20">
+                                <div class="card-body">
+
+                                    <h4 class="mt-0 header-title"> Liste des des articles</h4>
+
+                                    <div class="table-rep-plugin">
+                                        <div class="table-wrapper">
+
+                                            <div class="table-responsive b-0" data-pattern="priority-columns">
+                                                <table class="table">
+
+                                                    <tbody>
+                                                    {%  set i =1 %}
+                                                    {% for article in blogs %}
+                                                        <tr>
+
+                                                            <td>{{i}}</td>
+                                                            <td><img width="30" height="30" src="/uploads/{{ article.image }}"></td></td>
+                                                            <td>{{ categorie.nom }}</td>
+                                                            <td class="button-items">
+                                                                <a style="float: right" class="btn btn-info waves-effect waves-light"  href="{{ path('article_show', {'id': article.id}) }}">Montrer</a>
+                                                                <a  style="float: right" class="btn btn-success waves-effect waves-light "  href="{{ path('article_edit', {'id': article.id}) }}">Modifier</a>
+                                                            </td>
+                                                        </tr>
+                                                        {%  set i =i+1 %}
+                                                    {% else %}
+                                                        <tr>
+                                                            <td colspan="4">no records found</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+
+                </div><!-- container -->
+
+            </div>
+
+        </div> <!-- content -->
+
+        <footer class="footer">
+            Look4Desgin <i class="mdi mdi-heart text-danger"></i> 2021.
+        </footer>
+
+    </div>
+    <!-- End Right content here -->
+
+</div>
+<!-- END wrapper -->
+
+
+{% endblock %}
+
+
+

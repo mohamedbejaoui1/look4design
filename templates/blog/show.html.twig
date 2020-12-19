@@ -1,0 +1,67 @@
+{% extends 'dashboard/base.html.twig' %}
+
+        {% block body %}
+
+
+            {% block title %}{{ blog.titre }}{% endblock %}
+
+            {% include 'dashboard/leftSideBar.html.twig' %}
+
+            <section class="content">
+                <div class="container-fluid">
+
+
+                    <!-- #END# Basic Examples -->
+                    <!-- Exportable Table -->
+                    <div class="row clearfix">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>
+                                        <strong>{{ blog.titre }}</strong>
+                                    </h2>
+                                    <ul class="header-dropdown m-r--5">
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                               role="button" aria-haspopup="true" aria-expanded="false">
+                                                <i class="material-icons">more_vert</i>
+                                            </a>
+                                            <ul class="dropdown-menu pull-right">
+
+                                                <li><a href="{{ path('blog_new') }}" class=" waves-effect waves-block">Ajouter
+                                                        un nouvel article</a></li>
+                                                <li><a href="{{ path('blog_index') }}"
+                                                       class=" waves-effect waves-block">Liste des articles</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="body">
+                                    <div class="row clearfix">
+                                        <div class="col-md-12">
+
+                                            <div><img height="400" src="/uploads/{{ blog.image }}"></div>
+                                            <div> <p style="font-size: 17px; color: black; padding: 10px;"> {{ blog.text }}</p></div>
+
+
+                                            <a class="btn bg-purple waves-effect "
+                                               href="{{ path('blog_edit', {'id': blog.id}) }}">Modifier</a>
+                                            {{ include('blog/_delete_form.html.twig') }}
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+
+
+
+        {% endblock %}
+
+

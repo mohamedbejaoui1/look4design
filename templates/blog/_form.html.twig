@@ -1,0 +1,39 @@
+{{ form_start(form) }}
+
+
+<div class="row clearfix">
+    <div class="col-md-12 mb-3">
+
+        {{ form_widget(form.image) }}
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <label for="blog_titre" class="col-sm-2 col-form-label">Titre </label>
+            <div class="col-sm-10">
+                {{ form_widget(form.titre) }}
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-12 mt-3">
+        <div class="row">
+
+            <label for="blog_text" class="col-sm-2 col-form-label">Text </label>
+            <div class="col-sm-10">
+                {{ form_widget(form.text  ) }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-12 mt-3">
+        <div class="row">
+
+            {{ form_widget(form._token) }}
+            <button class="btn btn-danger waves-effect col-2 offset-10">{{ button_label|default('Enregistrer') }}</button>
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}

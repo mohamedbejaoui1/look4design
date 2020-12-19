@@ -1,0 +1,48 @@
+{% extends 'users/base.html.twig' %}
+   {% block title %}Categories{% endblock %}
+        {% block body %}
+
+
+            <body class="header_sticky header-style-1 has-menu-extra">
+
+        <div class="boxed">
+            <div id="site-header-wrap">
+                {% include 'users/header.html.twig' %}
+            </div>
+            <section class="blog-posts grid-posts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-wrap margin-bottom-26">
+                                <div class="grid three">
+                                    {% for article in blogs %}
+                                    <article class="post clearfix">
+                                        <div class="featured-post">
+                                            <img style="width: 380px ; height: 280px " src="/uploads/{{ article.image }}"
+                                                 alt="image">
+                                        </div>
+                                        <div class="content-post">
+                                            <div class="title-post">
+                                                <h2><a href="/blogs/users/{{ article.id }}">{{article.titre}}</a></h2>
+                                            </div><!-- /.title-post -->
+                                            <div class="entry-post">
+                                                <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ article.text }}</p>
+                                                <div class="more-link">
+                                                    <a href="/blogs/users/{{ article.id }}">Afficher plus</a>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.content-post -->
+                                    </article><!-- /.post -->
+                                    {% endfor %}
+                                </div><!-- /.grid -->
+                            </div><!-- /.post-wrap -->
+
+                        </div><!-- /.col-md-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section>
+
+            {% include 'users/footer.html.twig' %}
+        </div>
+
+        {% endblock %}
